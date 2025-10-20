@@ -2,21 +2,16 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Ejemplo básico jsPsych</title>
-  <!-- Enlazamos CSS de jsPsych y estilos propios -->
-  <link href="https://github.com/Alejandra-Sa/Proyecto/blob/main/css/estilos.css" rel="stylesheet" />
-  <link href="css/estilos.css" rel="stylesheet" />
-</head>
-<body>
-  <div id="jspsych-target"></div>
+  <title>Mini experimento jsPsych</title>
+  <!-- Carga CSS jsPsych -->
+  <link href="https://cdn.jsdelivr.net/npm/@jspsych/jspsych@7.3.0/dist/css/jspsych.css" rel="stylesheet" />
   
-  <!-- Biblioteca jsPsych -->
-  <script src="https://github.com/Alejandra-Sa/Proyecto/blob/main/js/experimento.js"></script>
-  <script src="https://github.com/Alejandra-Sa/Proyecto/blob/main/js/plugins/jspsych-html-keyboard-response.js"></script>
+  <!-- Carga jsPsych y plugin requerido -->
+  <script src="https://cdn.jsdelivr.net/npm/@jspsych/jspsych@7.3.0/dist/jspsych.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@jspsych/plugin-html-keyboard-response@7.3.0/dist/jspsych-html-keyboard-response.js"></script>
+</head>
+<body></body>
 
-  <!-- Nuestro código externo -->
-  <script src="js/experimento.js"></script>
-</body>
+<!-- Carga tu código externo -->
+<script src="js/experimento.js"></script>
 </html>
-
-
