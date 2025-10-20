@@ -1,21 +1,13 @@
-// Inicializamos jsPsych
+// Inicializar jsPsych después de que las bibliotecas estén cargadas
 const jsPsych = initJsPsych({
-  display_element: 'jspsych-target',
-  on_finish: function() {
-    jsPsych.data.displayData();  // Mostrar resultados al terminar
-  }
+  on_finish: () => jsPsych.data.displayData()
 });
 
-// Definimos un trial que pide responder pulsando A o L
-const trial1 = {
+// Definir un trial simple que muestra un texto y espera una tecla
+const bienvenida = {
   type: jsPsychHtmlKeyboardResponse,
-  stimulus: '<p>¿Qué tecla vas a elegir? Presiona A o L.</p>',
-  choices: ['a','l'],
-  prompt: '<p>Presiona una de las dos teclas.</p>',
-  on_finish: function(data){
-    console.log('Respuesta registrada:', data.response);
-  }
+  stimulus: 'Presioná cualquier tecla para continuar'
 };
 
-// Ejecutamos el experimento
-jsPsych.run([trial1]);
+// Ejecutar el experimento con el trial en el timeline
+jsPsych.run([bienvenida]);
